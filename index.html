@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Yum | a JS slideshow by Karelle Hofler</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link href="css/main.css" rel="stylesheet">
+        <!--Font Awesome \ v5.8.2-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:900|Poppins" rel="stylesheet">
+        <!--Jquery-->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="site-nav">
+            <div class="toggle">
+                <a class="logo" href="index.html">
+                    <img src="img/yum-logo.svg">
+                </a>
+                <ul class="social-media" id="menu">
+                    <li><a href="https://instagram.com/kreative94"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/kreative94"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.behance.net/karellehofler"><i class="fab fa-behance"></i></a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <main id="main">
+            <!--The Slideshow-->
+            <div class="slide-container" onload="currentSlide(0)">
+                <img id="slide" src="" class="fade" onclick="openModal()">
+                <P id="caption">Caption Goes Here</P>
+                <button id="prev" onclick="changeIndex(-1)">&lang;</button>
+                <button id="next" onclick="changeIndex(-1)">&rang;</button>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p class="copyright">2019. Karelle Hofler.</p>
+        </footer>
+        <!--The modal for the slideshow / is displayed when user clicks on 
+        the #slide-->
+        <div id="gallery-modal" class="modal">
+            <p class="exit" onclick="closeModal()">X</p>
+            <img id="gallery-img" src="" alt="Image goes here too">
+        </div>
+
+        <!-- <script src="main.js"></script> -->
+        <script src="js/slide.js"></script>
+    </body>
+
+</html>
